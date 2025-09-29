@@ -1,121 +1,201 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="keywords" content="Haiming Zhu">
-<meta name="description" content="Haiming Zhu&#39;s home page">
-<meta name="google-site-verification" content="X2QFrl-bPeg9AdlMt4VKT9v6MJUSTCf-SrY3CvKt4Zs" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css">
-<link rel="shortcut icon" type="image/png" href="images/tab.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Haiming Zhu">
+    <meta name="description" content="Haiming Zhu's home page">
+    <meta name="google-site-verification" content="X2QFrl-bPeg9AdlMt4VKT9v6MJUSTCf-SrY3CvKt4Zs" />
+    <link rel="stylesheet" href="jemdoc.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="images/tab.png" />
 
-<title>Haiming Zhu</title>
+    <title>Haiming Zhu</title>
 
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'YOUR_NEW_TRACKING_ID', 'auto');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
+    ga('create', 'YOUR_NEW_TRACKING_ID', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
 </head>
 <body>
-<div id="layout-content" style="margin-top:25px">
-<table>
-	<tbody>
-		<tr>
-			<td width="650">
-				<div id="toptitle">
-					<h1>Haiming (Alex) Zhu</h1>
-					<h1><font face="Arial"> 朱海明 </font></h1>
-				</div>
-				<p style="text-align:left">
-					<a href="mailto:zhuhaimingzui@gmail.com">Email</a> &nbsp;/&nbsp;
-					<a href="https://scholar.google.com/citations?user=kqe0UM4AAAAJ&hl=zh-CN">Google Scholar</a>
-				</p>
-			</td>
-			<td>
-				<img src="./images/me.png" border="0" width="225"><br>
-			</td>
-		</tr>
-	</tbody>
-</table>
+    <!-- Main content wrapper for better semantics and accessibility -->
+    <main id="layout-content" aria-label="Main content">
+        <!-- Header section with title, contacts, and dark mode toggle -->
+        <header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td width="650">
+                            <div id="toptitle">
+                                <h1>Haiming (Alex) Zhu</h1>
+                                <h1><font face="Arial"> 朱海明 </font></h1>
+                            </div>
+                            <p style="text-align:left">
+                                <a href="mailto:zhuhaimingzui@gmail.com">Email</a> &nbsp;/&nbsp;
+                                <a href="https://scholar.google.com/citations?user=kqe0UM4AAAAJ&hl=zh-CN">Google Scholar</a> &nbsp;/&nbsp;
+                                <a href="https://github.com/Alex-Zhu1" target="_blank">GitHub</a> &nbsp;/&nbsp;
+                                <button id="theme-toggle" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+                            </p>
+                        </td>
+                        <td>
+                            <img src="./images/me.png" alt="Profile photo of Haiming Zhu" border="0" width="225">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
 
-<h2>Biography</h2>
-<p>
-    Hi, I’m Haiming Zhu. I am currently a Research Assistant at SUTD, working with <a href="https://na-z.github.io/">Prof. Na Zhao</a>. My research interests lie in Neural Radiance Fields (NeRFs) and Generative Models. More recently, I have been exploring <b>Embodied AI</b>, with a focus on <b>hand–object interaction (HOI)</b>.
-</p>
-<p>
-    Previously, I worked on video, image, and 3D scene editing by leveraging diffusion model priors with <a href="https://shengfenghe.github.io/">Prof. Shengfeng He</a> and <a href="https://cnnlstm.github.io/">Prof. Yangyang Xu</a>. I received my Master’s degree from Tsinghua University (SIGS) advised by <a href="https://scholar.google.com/citations?user=NxtaiY8AAAAJ&hl=en">Prof. Xiang Qian</a>.
-</p>
-<p>
-    I am always open to new opportunities and collaborations. Feel free to contact me!
-</p>
+        <!-- Biography section -->
+        <section aria-labelledby="biography-title">
+            <h2 id="biography-title">Biography</h2>
+            <p>
+                Hi, I’m Haiming Zhu, currently a Research Assistant at SUTD, working with <a href="https://na-z.github.io/">Prof. Na Zhao</a>. My research interests lie in Neural Radiance Fields (NeRFs) and Generative Models. More recently, I have been exploring <b>Embodied AI</b>, with a focus on <b>hand–object interaction (HOI)</b>.
+            </p>
+            <p>
+                Previously, I worked on video, image, and 3D scene editing by leveraging diffusion model priors with <a href="https://shengfenghe.github.io/">Prof. Shengfeng He</a> and <a href="https://cnnlstm.github.io/">Prof. Yangyang Xu</a>. I received my Master’s degree from Tsinghua University (SIGS) advised by <a href="https://scholar.google.com/citations?user=NxtaiY8AAAAJ&hl=en">Prof. Xiang Qian</a>.
+            </p>
+            <p>
+                I am always open to new opportunities and collaborations. Feel free to contact me!
+            </p>
+        </section>
 
-<h2>News</h2>
-<ul>
-    <li>09/2025: One paper accepted at IJCV.</li>
-    <li>06/2025: One first-author paper accepted at ICCV 2025: <i>Stable Score Distillation</i>.</li>
-</ul>
+        <!-- News section -->
+        <section aria-labelledby="news-title">
+            <h2 id="news-title">News</h2>
+            <ul>
+                <li>09/2025: One paper accepted at IJCV.</li>
+                <li>06/2025: One first-author paper accepted at ICCV 2025: <i>Stable Score Distillation</i>.</li>
+            </ul>
+        </section>
 
-<h2>Publications</h2>
-<table id="tbPublications" width="100%">
-	<tbody>
-		<div style="display: flex; align-items: center; margin: 20px 0;">
-			<hr style="flex: 1; border: none; height: 1px; background-color: #ccc; margin: 0 10px;">
-			<span style="white-space: nowrap; font-weight: bold;">2025</span>
-			<hr style="flex: 1; border: none; height: 1px; background-color: #ccc; margin: 0 10px;">
-		</div>
-		<tr>
-			<td width="206">
-				<img src="images/ijcv2025.png" width="200px" height="75" style="box-shadow: 4px 4px 8px #888">
-			</td>
-			<td><b>Invert Your Prompt: Editing-Aware Diffusion Inversion</b> <br>
-				Yangyang Xu, Wenqi Shao, Yong Du, <b>Haiming Zhu</b>, Yang Zhou, Jiayuan Xie, Ping Luo and Shengfeng He<br>
-				<i><b>IJCV 2025</b></i>  
-				<br>
-				PDF / 
-				Supp / 
-				Code
-			</td>
-		</tr>
-		<tr>
-			<td width="206">
-				<img src="images/iccv-25b.png" width="200px" height="75" style="box-shadow: 4px 4px 8px #888">
-			</td>
-			<td><b>Stable Score Distillation</b> <br>
-				<b>Haiming Zhu</b>, Yangyang Xu, Chenshu Xu, Tingrui Shen, Wenxi Liu, Yong Du, Jun Yu, and Shengfeng He<br>
-				<i><b>ICCV 2025</b></i>  
-				<br>
-				PDF / 
-				Supp / 
-				Project
-			</td>
-		</tr>
-	</tbody>
-</table>
+        <!-- Publications section: Modularized for easy iteration (add new years as list items) -->
+        <section aria-labelledby="publications-title">
+            <h2 id="publications-title">Publications</h2>
+            <ul class="publications-list">
+                <!-- 2026 publications (placed above 2025 as requested) -->
+                <!-- <li class="publication-year">
+                    <div class="year-divider">2026</div>
+                    <ul class="publication-list">
+                        <li class="publication-entry">
+                            <div class="publication-image">
+                                <img src="images/new2026.png" alt="2026 Publication Image">
+                            </div>
+                            <div class="publication-details">
+                                <b>New Paper Title</b> <br>
+                                Haiming Zhu, [Additional Authors]<br>
+                                <i><b>Journal/Conference 2026</b></i>  
+                                <br>
+                                PDF / Supp / Code
+                            </div>
+                        </li>
+                    </ul>
+                </li> -->
+                <!-- 2025 publications -->
+                <li class="publication-year">
+                    <div class="year-divider">2025</div>
+                    <ul class="publication-list">
+                        <li class="publication-entry">
+                            <div class="publication-image">
+                                <img src="images/ijcv2025.png" alt="IJCV 2025 Publication Image">
+                            </div>
+                            <div class="publication-details">
+                                <b>Invert Your Prompt: Editing-Aware Diffusion Inversion</b> <br>
+                                Yangyang Xu, Wenqi Shao, Yong Du, <b>Haiming Zhu</b>, Yang Zhou, Jiayuan Xie, Ping Luo and Shengfeng He<br>
+                                <i><b>IJCV 2025</b></i>  
+                                <br>
+                                PDF / 
+                                Supp / 
+                                Code
+                            </div>
+                        </li>
+                        <li class="publication-entry">
+                            <div class="publication-image">
+                                <img src="images/iccv-25b.png" alt="ICCV 2025 Publication Image">
+                            </div>
+                            <div class="publication-details">
+                                <b>Stable Score Distillation</b> <br>
+                                <b>Haiming Zhu</b>, Yangyang Xu, Chenshu Xu, Tingrui Shen, Wenxi Liu, Yong Du, Jun Yu, and Shengfeng He<br>
+                                <i><b>ICCV 2025</b></i>  
+                                <br>
+                                PDF /  
+                                <a href="https://github.com/Alex-Zhu1/SSD" target="_blank">Code</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-<h2>Education</h2>
-<ul>
-	<li>M.S., SIGS, Tsinghua University, 2021–2024</li>
-	<li>B.S., Jiangxi University of Finance and Economics, 2017–2021</li>
-</ul>
+		<!-- Blog section: Modular for adding new posts -->
+        <!-- <section aria-labelledby="blog-title">
+            <h2 id="blog-title">Blog</h2>
+            <ul class="blog-list">
+                <li class="blog-entry">
+                    <h3>Exploring Hand-Object Interaction in Embodied AI</h3>
+                    <p class="blog-date">September 10, 2025</p>
+                    <p class="blog-summary">
+                        In this post, I discuss recent advancements in hand-object interaction (HOI) for embodied AI, focusing on how NeRFs can enhance realistic simulations.
+                    </p>
+                    <a href="blog/hoi-embodied-ai.html" class="blog-link">Read more</a>
+                </li>
+                <li class="blog-entry">
+                    <h3>Reflections on Stable Score Distillation</h3>
+                    <p class="blog-date">June 15, 2025</p>
+                    <p class="blog-summary">
+                        A deep dive into the methodology behind our ICCV 2025 paper, exploring challenges and insights from developing Stable Score Distillation.
+                    </p>
+                    <a href="blog/stable-score-distillation.html" class="blog-link">Read more</a>
+                </li>
+            </ul>
+        </section> -->
 
-<!-- Footer with counter and credits -->
-<div style="margin-top:40px; padding-top:20px; border-top:1px solid #ccc; text-align:center; font-size:0.8em; color: rgba(0,0,0,0.4);">
-    &copy; Haiming Zhu | Last updated: September, 2025.<br><br>
-    <!-- Hit counter -->
-    <!-- <span>
-        <img src="https://www.easycounter.com/counter.php?YOUR_NEW_COUNTER_ID" border="0" alt="Hit Counter">
-    </span><br><br> -->
-    <!-- Template credit -->
-    This website template is borrowed from <a href="https://cnnlstm.github.io/" style="color: rgba(0,0,0,0.6); text-decoration: underline;">Yangyang Xu</a>. Thanks!
-</div>
+        <!-- Education section -->
+        <section aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+            <ul>
+                <li>M.S., SIGS, Tsinghua University, 2021–2024</li>
+                <li>B.S., Jiangxi University of Finance and Economics, 2017–2021</li>
+            </ul>
+        </section>
+    </main>
 
+    <!-- Footer section -->
+    <footer aria-label="Footer">
+        <div class="footer-content">
+            &copy; Haiming Zhu | Last updated: September, 2025.<br><br>
+            <!-- Hit counter (uncomment if needed) -->
+            <!-- <span>
+                <img src="https://www.easycounter.com/counter.php?YOUR_NEW_COUNTER_ID" border="0" alt="Hit Counter">
+            </span><br><br> -->
+            <!-- Template credit -->
+            This website template is borrowed from <a href="https://cnnlstm.github.io/" class="credit-link">Yangyang Xu</a>. Thanks!
+        </div>
+    </footer>
+
+    <!-- JavaScript for dark mode toggle -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Load saved theme from localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        toggleButton.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Toggle Dark Mode';
+
+        // Toggle theme on button click
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggleButton.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Toggle Dark Mode';
+        });
+    </script>
 </body>
 </html>
