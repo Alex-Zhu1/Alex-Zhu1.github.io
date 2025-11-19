@@ -11,15 +11,16 @@
 </head>
 <body>
 
-<!-- 深色模式切换按钮（固定右上角） -->
-<button id="theme-toggle" aria-label="Toggle Dark Mode">
-    <span class="sun">☀️</span>
-    <span class="moon">🌙</span>
-</button>
+<!-- 深色模式切换按钮（页面内右上角，非固定） -->
+<div id="theme-toggle-wrapper">
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
+</div>
 
 <main id="layout-content">
 
-    <!-- Header（已优化排版） -->
     <header class="header">
         <div class="header-text">
             <h1 class="name">Haiming Zhu</h1>
@@ -45,7 +46,6 @@
         </div>
     </header>
 
-    <!-- News -->
     <section>
         <h2>News</h2>
         <ul>
@@ -55,7 +55,6 @@
         </ul>
     </section>
 
-    <!-- Publications（完整内容） -->
     <section>
         <h2>
             Publications
@@ -118,7 +117,6 @@
         </ul>
     </section>
 
-    <!-- Services -->
     <section>
         <h2>Services</h2>
         <h3>Reviewer</h3>
@@ -128,7 +126,6 @@
         </ul>
     </section>
 
-    <!-- Education -->
     <section>
         <h2>Education</h2>
         <ul>
@@ -145,19 +142,34 @@
 </footer>
 
 <script>
-const toggle = document.getElementById('theme-toggle');
+// 深色模式：跟随系统偏好（不支持则默认浅色）+ 手动临时切换（刷新后重置）
 const html = document.documentElement;
-const saved = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', saved);
-toggle.innerHTML = saved === 'dark' ? '☀️' : '🌙';
+const toggle = document.getElementById('theme-toggle');
 
-toggle.addEventListener('click', () => {
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    toggle.innerHTML = next === 'dark' ? '☀️' : '🌙';
+// 应用主题并更新按钮图标
+function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    toggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+}
+
+// 初始加载：优先跟随系统偏好，不读取 localStorage
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(prefersDark ? 'dark' : 'light');
+
+// 实时监听系统主题变化（自动跟随）
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    applyTheme(e.matches ? 'dark' : 'light');
 });
 
+// 手动点击：仅本次会话有效（不保存到 localStorage）
+toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    // 注意：这里不再写入 localStorage
+});
+
+// Publications filter（保持不变）
 document.querySelectorAll('.filter-link').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();

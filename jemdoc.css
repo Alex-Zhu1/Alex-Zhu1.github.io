@@ -1,8 +1,8 @@
-/* Final 2025 Top-Tier Academic Homepage - Right-Top Toggle + Perfect Header */
+/* Final 2025 Top-Tier Academic Homepage - Toggle Inside Page */
 
 :root {
-    --primary: #4f46e5;
-    --text: #1f2937;
+    --primary: #527bbd;
+    --text:  #333;
     --bg: #ffffff;
     --light: #fcfcff;
     --border: #e2e8f0;
@@ -13,7 +13,7 @@
 }
 
 [data-theme="dark"] {
-    --primary: #818cf8;
+    --primary: #8ab4f8;
     --text: #e2e8f0;
     --bg: #0d1421;
     --light: #161f2e;
@@ -32,7 +32,7 @@ body {
     background: var(--bg);
     max-width: 1000px;
     margin: 0 auto;
-    padding: calc(var(--spacing)*2);
+    padding: calc(var(--spacing)*2) calc(var(--spacing)*2) calc(var(--spacing)*4);
     position: relative;
 }
 
@@ -41,14 +41,24 @@ a:hover { color: var(--accent); text-decoration: underline; }
 
 h1, h2 { color: var(--primary); font-weight: 600; }
 h1.name { font-size: 3em; margin-bottom: 24px; }
-h2 { font-size: 1.85em; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin: calc(var(--spacing)*1.5) 0 var(--spacing) 0; }
+h2 {
+    font-size: 1.85em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin: 28px 0 20px 0;   /* 关键修改：上 margin 从 calc(var(--spacing)*1.5) ≈36px 改为 28px */
+    color: var(--primary);
+    font-weight: 600;
+}
 
-/* 深色切换按钮 - 右上角 */
-#theme-toggle {
-    position: fixed;
+/* 深色切换按钮 - 页面内容区右上角（非固定） */
+#theme-toggle-wrapper {
+    position: absolute;
     top: 24px;
     right: 24px;
-    z-index: 100;
+    z-index: 10;
+}
+
+#theme-toggle {
     background: rgba(255,255,255,0.92);
     border: 1px solid var(--border);
     border-radius: 50%;
@@ -60,37 +70,33 @@ h2 { font-size: 1.85em; border-bottom: 1px solid var(--border); padding-bottom: 
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-[data-theme="dark"] #theme-toggle { background: rgba(0,0,0,0.7); }
-#theme-toggle:hover { transform: scale(1.1); }
 
-/* Header 优化 */
+[data-theme="dark"] #theme-toggle {
+    background: rgba(13,20,33,0.85);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.12);
+}
+
+/* Header */
 .header {
     display: flex;
     gap: 64px;
     align-items: center;
     flex-wrap: wrap;
-    margin: 80px 0 calc(var(--spacing)*3) 0;
-    padding: 20px 0;
+    margin: 60px 0 40px 0;   /* 关键修改：底部 margin 从 calc(var(--spacing)*3) ≈72px 改为 40px */
+    padding-top: 40px;
 }
 
-.header-text {
-    flex: 1;
-    min-width: 340px;
-}
-
-.biography p {
-    margin-bottom: 16px;
-    line-height: 1.68;
-}
-
+.header-text { flex: 1; min-width: 340px; }
+.biography p { margin-bottom: 16px; line-height: 1.68; }
 .biography p:last-of-type { margin-bottom: 24px; }
-
-.links {
-    font-size: 1.06em;
-    margin-top: 8px;
-}
+.links { font-size: 1.06em; margin-top: 8px; }
 
 .header-image img {
     width: 320px;
@@ -99,19 +105,16 @@ h2 { font-size: 1.85em; border-bottom: 1px solid var(--border); padding-bottom: 
     box-shadow: 0 20px 50px rgba(0,0,0,0.14);
     transition: transform 0.4s ease;
 }
+.header-image img:hover { transform: translateY(-8px); }
 
-.header-image img:hover {
-    transform: translateY(-8px);
-}
-
-/* Publications 样式（保持之前最优版本） */
+/* Publications（优化后紧凑版） */
 .publications-list { list-style: none; padding: 0; }
-.publication-year { margin: calc(var(--spacing)*2.5) 0; }
+.publication-year { margin: calc(var(--spacing)*1.5) 0; }  /* 减小年份区间隔 */
 .year-title {
     font-size: 1.65em;
     font-weight: 700;
     color: var(--primary);
-    margin: 0 0 calc(var(--spacing)*1.3) 0;
+    margin: 0 0 calc(var(--spacing)*0.8) 0;  /* 减小标题下间距 */
     padding-bottom: 9px;
     border-bottom: 2.4px solid var(--primary);
     display: inline-block;
@@ -120,7 +123,7 @@ h2 { font-size: 1.85em; border-bottom: 1px solid var(--border); padding-bottom: 
 .publication-entry {
     display: flex;
     gap: 32px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;  /* 关键减小：从 56px 到 32px */
     align-items: stretch;
 }
 
@@ -140,7 +143,6 @@ h2 { font-size: 1.85em; border-bottom: 1px solid var(--border); padding-bottom: 
     height: 100%;
     object-fit: contain;
     object-position: center;
-    background: transparent;
 }
 
 .publication-entry:hover .publication-image {
@@ -157,32 +159,11 @@ h2 { font-size: 1.85em; border-bottom: 1px solid var(--border); padding-bottom: 
     padding: 4px 0;
 }
 
-.publication-details strong {
-    font-size: 1.25em;
-    margin-bottom: 3px;
-    line-height: 1.3;
-}
-
-.publication-details .authors {
-    font-size: 1.04em;
-    margin-bottom: 4px;
-    line-height: 1.4;
-    opacity: 0.94;
-}
-
+.publication-details strong { font-size: 1.25em; margin-bottom: 3px; line-height: 1.3; }
+.publication-details .authors { font-size: 1.04em; margin-bottom: 4px; line-height: 1.4; opacity: 0.94; }
 .publication-details .authors b { font-weight: 600; color: var(--primary); }
-
-.publication-details .venue {
-    font-size: 1.02em;
-    opacity: 0.9;
-    margin-bottom: 4px;
-}
-
-.publication-details .links a {
-    margin-right: 16px;
-    font-size: 0.96em;
-    opacity: 0.85;
-}
+.publication-details .venue { font-size: 1.02em; opacity: 0.9; margin-bottom: 4px; }
+.publication-details .links a { margin-right: 16px; font-size: 0.96em; opacity: 0.85; }
 .publication-details .links a:hover { opacity: 1; }
 
 .publication-filter { font-size: 0.92em; margin-left: 14px; opacity: 0.78; }
@@ -198,15 +179,10 @@ footer {
     color: #64748b;
 }
 
-/* 响应式 */
 @media (max-width: 768px) {
-    #theme-toggle { top: 16px; right: 16px; width: 42px; height: 42px; font-size: 20px; }
-    .header {
-        flex-direction: column;
-        text-align: center;
-        gap: 36px;
-        margin-top: 90px;
-    }
+    #theme-toggle-wrapper { top: 16px; right: 16px; }
+    #theme-toggle { width: 42px; height: 42px; font-size: 20px; }
+    .header { flex-direction: column; text-align: center; gap: 36px; margin-top: 80px; }
     .header-text { order: 2; }
     .header-image { order: 1; }
     .header-image img { width: 280px; }
