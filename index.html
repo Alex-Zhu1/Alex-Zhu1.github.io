@@ -10,36 +10,32 @@
     <title>Haiming Zhu</title>
 </head>
 <body>
+
+<button id="theme-toggle" aria-label="Toggle Dark Mode">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+</button>
+
 <main id="layout-content">
 
-    <!-- Header -->
     <header class="header">
         <div class="header-text">
-            <div class="toptitle">
-                <h1>Haiming Zhu</h1>
-            </div>
+            <div class="toptitle"><h1>Haiming Zhu</h1></div>
             <div class="biography">
-                <p>
-                    I am a Research Assistant at SUTD, working with <a href="https://na-z.github.io/">Prof. Na Zhao</a>.
-                    My research focuses on Neural Radiance Fields (NeRFs), Generative Models, and <b>Embodied AI</b>,
-                    particularly <b>hand–object interaction (HOI)</b>.
-                </p>
-                <p>
-                    Previously, I developed methods for video, image, and 3D scene editing using diffusion model priors
-                    with <a href="https://shengfenghe.github.io/">Prof. Shengfeng He</a> and
-                    <a href="https://cnnlstm.github.io/">Prof. Yangyang Xu</a>.
-                    I received my Master’s degree from Tsinghua University (SIGS) under
-                    <a href="https://scholar.google.com/citations?user=NxtaiY8AAAAJ&hl=en">Prof. Xiang Qian</a>.
-                </p>
-                <p>
-                    I am open to new opportunities and collaborations. Feel free to reach out!
-                </p>
+                <p>I am a Research Assistant at SUTD, working with <a href="https://na-z.github.io/">Prof. Na Zhao</a>. 
+                My research focuses on Neural Radiance Fields (NeRFs), Generative Models, and <b>Embodied AI</b>, 
+                particularly <b>hand–object interaction (HOI)</b>.</p>
+                <p>Previously, I developed methods for video, image, and 3D scene editing using diffusion model priors 
+                with <a href="https://shengfenghe.github.io/">Prof. Shengfeng He</a> and 
+                <a href="https://cnnlstm.github.io/">Prof. Yangyang Xu</a>. 
+                I received my Master's degree from Tsinghua University (SIGS) under 
+                <a href="https://scholar.google.com/citations?user=NxtaiY8AAAAJ&hl=en">Prof. Xiang Qian</a>.</p>
+                <p>I am open to new opportunities and collaborations. Feel free to reach out!</p>
             </div>
             <p class="links">
                 <a href="mailto:zhuhaimingzui@gmail.com">Email</a> /
                 <a href="https://scholar.google.com/citations?user=kqe0UM4AAAAJ&hl=zh-CN" target="_blank">Google Scholar</a> /
-                <a href="https://github.com/Alex-Zhu1" target="_blank">GitHub</a> /
-                <button id="theme-toggle">Toggle Dark Mode</button>
+                <a href="https://github.com/Alex-Zhu1" target="_blank">GitHub</a>
             </p>
         </div>
         <div class="header-image">
@@ -47,93 +43,116 @@
         </div>
     </header>
 
-    <!-- News -->
     <section>
         <h2>News</h2>
         <ul>
+            <li>11/2025: First-author paper accepted at TVCG: <i>Zero-Shot Video Translation via Token Warping</i>.</li>
             <li>09/2025: One paper accepted at IJCV.</li>
             <li>06/2025: First-author paper accepted at ICCV 2025: <i>Stable Score Distillation</i>.</li>
         </ul>
     </section>
 
-    <!-- Publications -->
     <section>
-        <h2>Publications</h2>
+        <h2>
+            Publications
+            <span class="publication-filter">
+                ( <a class="filter-link active" data-filter="selected">Selected</a>
+                <span class="separator"> / </span>
+                <a class="filter-link" data-filter="all">All</a> )
+            </span>
+        </h2>
+        
         <ul class="publications-list">
             <li class="publication-year">
-                <h3>2025</h3>
+                <div class="year-title">2025</div>
                 <ul class="publication-list">
-                    <li class="publication-entry">
+
+                    <li class="publication-entry" data-selected="true">
                         <div class="publication-image">
-                            <img src="teaser/ijcv2025.png" alt="IJCV 2025 Publication Image">
+                            <img src="teaser/TVCG-2025.png" alt="Zero-Shot Video Translation">
                         </div>
                         <div class="publication-details">
-                            <b>Invert Your Prompt: Editing-Aware Diffusion Inversion</b><br>
-                            Yangyang Xu, Wenqi Shao, Yong Du, <b>Haiming Zhu</b>, Yang Zhou, Jiayuan Xie, Ping Luo and Shengfeng He<br>
-                            <b>IJCV 2025</b><br>
-                            PDF / Supp / Code
+                            <strong>Zero-Shot Video Translation via Token Warping</strong>
+                            <div class="authors"><b>Haiming Zhu</b>, Yangyang Xu, Jun Yu, Shengfeng He</div>
+                            <div class="venue">TVCG 2025</div>
+                            <div class="links">
+                                <a href="https://arxiv.org/pdf/2507.09168" target="_blank">PDF</a> /
+                                <a href="https://github.com/Alex-Zhu1/SSD" target="_blank">Code</a>
+                            </div>
                         </div>
                     </li>
-                    <li class="publication-entry first-author">
+
+                    <li class="publication-entry" data-selected="false">
                         <div class="publication-image">
-                            <img src="teaser/iccv-25b.png" alt="ICCV 2025 Publication Image">
+                            <img src="teaser/ijcv2025.png" alt="Invert Your Prompt">
                         </div>
                         <div class="publication-details">
-                            <b>Stable Score Distillation</b><br>
-                            <b>Haiming Zhu</b>, Yangyang Xu, Chenshu Xu, Tingrui Shen, Wenxi Liu, Yong Du, Jun Yu, and Shengfeng He<br>
-                            <b>ICCV 2025</b><br>
-                            <a href="https://arxiv.org/pdf/2507.09168" target="_blank">PDF</a> /
-                            <a href="https://github.com/Alex-Zhu1/SSD" target="_blank">Code</a>
+                            <strong>Invert Your Prompt: Editing-Aware Diffusion Inversion</strong>
+                            <div class="authors">Yangyang Xu, Wenqi Shao, Yong Du, <b>Haiming Zhu</b>, Yang Zhou, Jiayuan Xie, Ping Luo, Shengfeng He</div>
+                            <div class="venue">IJCV 2025</div>
+                            <div class="links">PDF / Supp / Code</div>
                         </div>
                     </li>
+
+                    <li class="publication-entry" data-selected="true">
+                        <div class="publication-image">
+                            <img src="teaser/iccv-25b.png" alt="Stable Score Distillation">
+                        </div>
+                        <div class="publication-details">
+                            <strong>Stable Score Distillation</strong>
+                            <div class="authors"><b>Haiming Zhu</b>, Yangyang Xu, Chenshu Xu, Tingrui Shen, Wenxi Liu, Yong Du, Jun Yu, Shengfeng He</div>
+                            <div class="venue">ICCV 2025</div>
+                            <div class="links">
+                                <a href="https://arxiv.org/pdf/2507.09168" target="_blank">PDF</a> /
+                                <a href="https://github.com/Alex-Zhu1/SSD" target="_blank">Code</a>
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
             </li>
         </ul>
     </section>
 
-    <!-- Services -->
-    <section>
-        <h2>Services</h2>
-        <h3>Reviewer</h3>
-        <ul>
-            <li>Conference: NeurIPS 2024</li>
-            <li>Journal: Knowledge-Based Systems (KBS)</li>
-        </ul>
-    </section>
-
-    <!-- Education -->
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>M.S., SIGS, Tsinghua University, 2021–2024</li>
-            <li>B.S., Jiangxi University of Finance and Economics, 2017–2021</li>
-        </ul>
-    </section>
+    <section><h2>Services</h2><h3>Reviewer</h3><ul><li>NeurIPS 2024</li><li>Knowledge-Based Systems (KBS)</li></ul></section>
+    <section><h2>Education</h2><ul><li>M.S., SIGS, Tsinghua University, 2021–2024</li><li>B.S., Jiangxi University of Finance and Economics, 2017–2021</li></ul></section>
 
 </main>
 
-<!-- Footer -->
 <footer>
-    &copy; Haiming Zhu | Last updated: September, 2025.<br>
-    This website template is borrowed from
-    <a href="https://cnnlstm.github.io/" class="credit-link">Yangyang Xu</a>. Thanks!
+    &copy; Haiming Zhu | Last updated: November, 2025.<br>
+    Template borrowed from <a href="https://cnnlstm.github.io/" class="credit-link">Yangyang Xu</a>.
 </footer>
 
-<!-- Dark mode script -->
 <script>
-const toggleButton = document.getElementById('theme-toggle');
+const toggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
-toggleButton.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Toggle Dark Mode';
+const saved = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', saved);
+toggle.innerHTML = saved === 'dark' ? '☀️' : '🌙';
 
-toggleButton.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
+toggle.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
-    toggleButton.textContent = next === 'dark' ? 'Switch to Light Mode' : 'Toggle Dark Mode';
+    toggle.innerHTML = next === 'dark' ? '☀️' : '🌙';
 });
+
+document.querySelectorAll('.filter-link').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.filter-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        const filter = link.dataset.filter;
+        document.querySelectorAll('.publication-entry').forEach(p => {
+            p.style.display = (filter === 'all' || p.dataset.selected === 'true') ? 'flex' : 'none';
+        });
+        document.querySelectorAll('.publication-year').forEach(y => {
+            y.style.display = [...y.querySelectorAll('.publication-entry')].some(p => p.style.display !== 'none') ? 'block' : 'none';
+        });
+    });
+});
+document.querySelector('.filter-link.active').click();
 </script>
 </body>
 </html>
