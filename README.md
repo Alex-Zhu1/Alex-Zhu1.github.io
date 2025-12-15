@@ -1,43 +1,40 @@
-<div align="left">
+# 👋 Hi, I'm **Haiming Zhu (朱海明)**
+### 🧭 *An AI Ferryman.*
 
-# 🌟 Hello! I am Haiming Zhu.
-### 🎯 A AI Ferryman
-
-</div>
-
-## 📊 GitHub | Statistics
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=alex-zhu1&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=alex-zhu1&layout=compact&langs_count=8&theme=radical"/>
-</div>
-
-## 📈 Contribution Timeline
-![](https://github-readme-activity-graph.vercel.app/graph?username=alex-zhu1&theme=dracula)
-
-## 🌐 Social Media
-
-<!-- - 💬 **WeChat Official Account**: 海角36号 -->
-- 📱 **WeChat**: ********
-<!-- - 🐦 **Blog**: [Sunny Today](https://www.alex-zhu1.top) -->
-- 📫 **Email**: zhuhaimingzui@gmail.com
 ---
 
-<div align="center">
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+<!-- Left column -->
+<div style="flex: 1 1 48%; min-width: 300px;">
+
+## 🌟 Pinned Projects
+
+<a href="https://github.com/Alex-Zhu1/TokenWarping">
+  <img width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=Alex-Zhu1&repo=TokenWarping&theme=tokyonight" />
+</a>
+
+<a href="https://github.com/Alex-Zhu1/SSD">
+  <img width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=Alex-Zhu1&repo=SSD&theme=tokyonight" />
+</a>
 
 </div>
 
-<!--
-**alex-zhu1/alex-zhu1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- Right column -->
+<div style="flex: 1 1 48%; min-width: 300px; display: flex; flex-direction: column; gap: 10px;">
 
-Here are some ideas to get you started:
+## 📊 GitHub Statistics
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<img width="100%" style="max-height: 280px;" src="https://github-readme-stats.vercel.app/api?username=Alex-Zhu1&show_icons=true&theme=tokyonight"/>
+
+<img width="100%" style="max-height: 200px;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alex-Zhu1&layout=compact&langs_count=8&theme=tokyonight"/>
+
+</div>
+
+</div>
+
+---
+
+## 🌐 Contact
+- 📱 WeChat: ********
+- 📫 Email: **zhuhaimingzui@gmail.com**
